@@ -12,5 +12,5 @@ spring:
     password: 1234
 mybatis:
   mapperLocations: classpath:mapper/*.xml
-  type-aliases-package: com.yzm.springCloud.entities    # 所有Entity别名类所在包
+  type-aliases-package: com.yzm.api.commons.entities    # 所有Entity别名类所在包
 

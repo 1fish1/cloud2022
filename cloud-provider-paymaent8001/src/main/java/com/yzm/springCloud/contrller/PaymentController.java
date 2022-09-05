@@ -1,7 +1,8 @@
 package com.yzm.springCloud.contrller;
 
-import com.yzm.springCloud.entities.CommonResult;
-import com.yzm.springCloud.entities.Payment;
+
+import com.yzm.api.commons.entities.CommonResult;
+import com.yzm.api.commons.entities.Payment;
 import com.yzm.springCloud.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;

@@ -1,7 +1,8 @@
 package com.yzm.springCloud.contoller;
 
-import com.yzm.springCloud.entities.CommonResult;
-import com.yzm.springCloud.entities.Payment;
+
+import com.yzm.api.commons.entities.CommonResult;
+import com.yzm.api.commons.entities.Payment;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
@@ -18,7 +19,7 @@ public class OrderController {
     private RestTemplate restTemplate;
 
     @GetMapping("/consumer/payment/create")
-    public CommonResult<Payment> create(@RequestBody Payment payment) {
+    public CommonResult<Payment> create(Payment payment) {
         log.info("sdasdasda");
         return restTemplate.postForObject(PAYMENT_URL + "/payment/create", payment, CommonResult.class);
     }

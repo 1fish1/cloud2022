@@ -8,6 +8,7 @@
     <modules>
         <module>cloud-provider-paymaent8001</module>
         <module>cloud-consumer-order80</module>
+        <module>cloud-api-commons</module>
     </modules>
     <packaging>pom</packaging><!-- 这里添加，注意不是jar或war -->
 
