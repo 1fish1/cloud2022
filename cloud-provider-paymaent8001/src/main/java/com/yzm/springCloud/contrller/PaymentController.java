@@ -1,14 +1,10 @@
-package com.yzm.springcloud.contrller;
+package com.yzm.springCloud.contrller;
 
-import com.yzm.springcloud.entities.CommonResult;
-import com.yzm.springcloud.entities.Payment;
-import com.yzm.springcloud.service.PaymentService;
-import lombok.Value;
+import com.yzm.springCloud.entities.CommonResult;
+import com.yzm.springCloud.entities.Payment;
+import com.yzm.springCloud.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -21,7 +17,7 @@ public class PaymentController {
     private PaymentService paymentService;
 
     @PostMapping(value = "/payment/create")
-    public CommonResult create(Payment payment) {
+    public CommonResult create(@RequestBody Payment payment) {
         int result = paymentService.create(payment);
         log.info("*****插入结果：" + result + "asdasdadsasd");
 
@@ -35,7 +31,7 @@ public class PaymentController {
     @GetMapping(value = "/payment/get/{id}")
     public CommonResult<Payment> getPaymentById(@PathVariable("id") Long id) {
         Payment payment = paymentService.getPaymentById(id);
-        log.info("*****插入结果：" + id + "中文环境中文环境");
+        log.info("*****获取结果：" + id + "中文环境中文环境");
         if (payment != null) {
             return new CommonResult(200, "查询成功,serverPort:  " + serverPort, payment);
         } else {

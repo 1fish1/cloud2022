@@ -1,6 +1,6 @@
-package com.yzm.springcloud.service;
+package com.yzm.springCloud.service;
 
-import com.yzm.springcloud.entities.Payment;
+import com.yzm.springCloud.entities.Payment;
 import org.apache.ibatis.annotations.Param;
 
 
