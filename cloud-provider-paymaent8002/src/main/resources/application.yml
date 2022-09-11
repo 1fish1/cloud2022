@@ -1,9 +1,8 @@
 server:
-  port: 8001
+  port: 8002
 
 spring:
   application:
-    # 同一个服务的服务名字设置一样，那么就可以互相切换
     name: cloud-payment-service
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型

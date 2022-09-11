@@ -4,7 +4,6 @@ package com.yzm.springCloud.contrller;
 import com.yzm.api.commons.entities.CommonResult;
 import com.yzm.api.commons.entities.Payment;
 import com.yzm.springCloud.service.PaymentService;
-
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +15,7 @@ import java.util.UUID;
 @RestController
 public class PaymentController {
 
-    //    private final static Integer serverPort = 8001;
+    //    private final static Integer serverPort = 8002;
     @Value("${server.port}")
     private String serverPort;
     @Resource
@@ -28,7 +27,7 @@ public class PaymentController {
         log.info("*****插入结果：" + result + "asdasdadsasd");
 
         if (result > 0) {
-            return new CommonResult(200, "插入数据库成功,serverPort: " + serverPort, result + "UUID= " + UUID.randomUUID().toString());
+            return new CommonResult(200, "插入数据库成功,serverPort: " + serverPort, result + "UUID= " + UUID.randomUUID().toString()) ;
         } else {
             return new CommonResult(444, "插入数据库失败", null);
         }
