@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: cloud-consumer-order80
+    name: cloud-consumer-order
 eureka:
   client:
     #表示是否将自己注册进Eurekaserver默认为true。
@@ -12,4 +12,4 @@ eureka:
     fetchRegistry: true
     service-url:
     #defaultZone: http://localhost:7001/eureka
-     defaultZone: http://eureka7001.com:7001/eureka, http://eureka7002.com:7002/eureka
+     defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
